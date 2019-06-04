@@ -1,20 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+s<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="HE.db" uuid="000bcf62-ca4a-4a35-b2c0-8406490f9fd6">
+    <data-source source="LOCAL" name="he.sqlite" uuid="8a4abdcb-208d-4cf5-b800-6a49f571904d">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/../Database/HE.db</jdbc-url>
-      <driver-properties>
-        <property name="enable_load_extension" value="true" />
-      </driver-properties>
-    </data-source>
-    <data-source source="LOCAL" name="new" uuid="e4153643-099d-46a6-b3dd-faf8a63acaba">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/../Database/new</jdbc-url>
+      <jdbc-url>jdbc:sqlite:/tmp/he.sqlite</jdbc-url>
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>
