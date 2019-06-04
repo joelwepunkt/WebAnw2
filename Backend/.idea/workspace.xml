@@ -9,43 +9,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" line="15" mnemonic="7" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef16d0e9-4755-4ff4-8dbf-8a36afea8369" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Tomcat_8_5_39__Ubuntu_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Tomcat_8_5_41.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/he/CPU.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/he/CPU.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Logo/Bildschirmfoto vom 2019-03-28 18-36-12.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Logo/Bildschirmfoto vom 2019-03-28 18-36-12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Logo/Logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Logo/Logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Logo/Logo2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Logo/Logo2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Logo/Logo3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Logo/Logo3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Pictures/4-Sterne.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pictures/4-Sterne.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Pictures/5-Sterne.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pictures/5-Sterne.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Pictures/AMD_Athlon_200GE.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pictures/AMD_Athlon_200GE.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Pictures/AMD_Ryzen_1300X.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pictures/AMD_Ryzen_1300X.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Pictures/AMD_Ryzen_1600X.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pictures/AMD_Ryzen_1600X.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Pictures/AMD_Ryzen_1800X.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pictures/AMD_Ryzen_1800X.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Pictures/AMD_Ryzen_2200G.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pictures/AMD_Ryzen_2200G.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Pictures/AMD_Ryzen_2400G.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pictures/AMD_Ryzen_2400G.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Pictures/AMD_Ryzen_2600.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pictures/AMD_Ryzen_2600.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Pictures/AMD_Ryzen_2600X_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pictures/AMD_Ryzen_2600X_2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Pictures/AMD_Ryzen_2600X_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pictures/AMD_Ryzen_2600X_3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Pictures/AMD_Ryzen_2600x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pictures/AMD_Ryzen_2600x.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Pictures/AMD_Ryzen_2700.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pictures/AMD_Ryzen_2700.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Pictures/AMD_Ryzen_2700X.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pictures/AMD_Ryzen_2700X.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Pictures/Intel_Core_i3_8100.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pictures/Intel_Core_i3_8100.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Pictures/Intel_Core_i5_9600K.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pictures/Intel_Core_i5_9600K.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Pictures/Intel_Core_i7_8700.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pictures/Intel_Core_i7_8700.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Pictures/Intel_Core_i7_9700K.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pictures/Intel_Core_i7_9700K.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Pictures/Intel_Core_i9_9900K.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pictures/Intel_Core_i9_9900K.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Pictures/bitcoin-225080_1280.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pictures/bitcoin-225080_1280.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Pictures/card-1673581_1280.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pictures/card-1673581_1280.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Pictures/paypal-784404_1280.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pictures/paypal-784404_1280.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTMLCode/Pictures/shopping-29647_1280.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pictures/shopping-29647_1280.png" afterDir="false" />
-    </list>
+    <list default="true" id="ef16d0e9-4755-4ff4-8dbf-8a36afea8369" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -166,6 +130,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -218,7 +183,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -268,17 +232,18 @@
       <workItem from="1558428373716" duration="47000" />
       <workItem from="1558428494582" duration="564000" />
       <workItem from="1558429257575" duration="7766000" />
+      <workItem from="1558524434368" duration="679000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16999000" />
+    <option name="totallyTimeSpent" value="17678000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2671141" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27114093" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -304,7 +269,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.3295302" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.3295302" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
@@ -339,13 +304,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/he/CPU.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/de/he/Article.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/he/AppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -353,10 +311,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Pictures/paypal-784404_1280.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
@@ -367,8 +328,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/Pictures/paypal-784404_1280.png">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
