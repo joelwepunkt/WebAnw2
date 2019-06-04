@@ -32,11 +32,13 @@ public class Hardwareelectronics {
     }
 
     @GET
-    @Path("Cpudetail")
+    @Path("Cpus/{pathID}")
     // Tell Jersey we want to return JSON
     @Produces(MediaType.APPLICATION_JSON)
-    public Response cpuJSON() throws Exception {
-        Vector<CPU> cpus = getAllCpus();   //Method should return selected Cpu!
+    public Response cpuJSON(@PathParam("pathID") String strID) throws Exception {
+        int intID = Integer.parseInt(strID);
+        SQLite s = new SQLite();
+        CPU cpus = s.selectCPU(intID);   //Method should return selected Cpu!
 
         // By setting our Vector<EntryModel> into the entity method
         // Jersey now tries to convert our POJO (Plain Old Java Object) into JSON
@@ -49,7 +51,8 @@ public class Hardwareelectronics {
     // Tell Jersey we want to return JSON
     @Produces(MediaType.APPLICATION_JSON)
     public Response cpusJSON() throws Exception {
-        Vector<CPU> cpus = getAllCpus();   //Method should return all Cpus we offer!
+        SQLite s = new SQLite();
+        Vector<CPU> cpus = s.getAllCpus();   //Method should return all Cpus we offer!
 
         // By setting our Vector<EntryModel> into the entity method
         // Jersey now tries to convert our POJO (Plain Old Java Object) into JSON

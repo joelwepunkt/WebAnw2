@@ -31,7 +31,7 @@ public class SQLite {
     private Connection connect() {
         Connection conn = null;
         try {
-            String sqlPath = "";
+            String sqlPath = "/tmp/he.db";
             conn = DriverManager.getConnection("jdbc:sqlite:" + sqlPath);
         }
         catch (SQLException e) {
