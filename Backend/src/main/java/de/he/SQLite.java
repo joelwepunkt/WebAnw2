@@ -1,6 +1,8 @@
 package de.he;
 
 import org.glassfish.jersey.server.mvc.Viewable;
+
+import java.io.File;
 import java.net.URI;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -28,10 +30,22 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
 public class SQLite {
-    private Connection connect() {
+    private Connection connect() throws ClassNotFoundException {
+        System.out.println("1");
+
+        Class.forName("org.sqlite.JDBC");
+        System.out.println("2");
+
         Connection conn = null;
         try {
             String sqlPath = "/tmp/he.db";
+            boolean initDatabase = !(new File(sqlPath).exists());
+            if(initDatabase){
+                System.out.println("okay");
+            }
+            else
+                System.out.println("sieht schlecht aus lol");
+
             conn = DriverManager.getConnection("jdbc:sqlite:" + sqlPath);
         }
         catch (SQLException e) {
@@ -69,6 +83,9 @@ public class SQLite {
             System.out.println(e.getMessage());
 
             return -1;
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            return -1;
         }
     }
 
@@ -88,6 +105,8 @@ public class SQLite {
         }
         catch (SQLException e) {
             System.out.println(e.getMessage());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
         return cpu;
     }
@@ -105,6 +124,8 @@ public class SQLite {
         }
         catch (SQLException e) {
             System.out.println(e.getMessage());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
         return cpus;
     }

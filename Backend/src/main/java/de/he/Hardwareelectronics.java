@@ -51,6 +51,8 @@ public class Hardwareelectronics {
     // Tell Jersey we want to return JSON
     @Produces(MediaType.APPLICATION_JSON)
     public Response cpusJSON() throws Exception {
+        System.out.println("okay");
+
         SQLite s = new SQLite();
         Vector<CPU> cpus = s.getAllCpus();   //Method should return all Cpus we offer!
 
