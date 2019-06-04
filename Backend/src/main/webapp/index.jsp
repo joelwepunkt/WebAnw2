@@ -52,13 +52,13 @@
             <a class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="Products.html">Prozessoren</a>
+            <a class="nav-link" href="Products.jsp">Prozessoren</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="Products.html">Arbeitsspecher</a>
+            <a class="nav-link" href="Products.jsp">Arbeitsspecher</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="Products.html">Festplatten</a>
+            <a class="nav-link" href="Products.jsp">Festplatten</a>
         </li>
         <li class="nav-item pull-right">
             <a class="nav-link" href="Kontakt.html">Kontakt</a>

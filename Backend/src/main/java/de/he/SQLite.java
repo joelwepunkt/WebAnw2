@@ -1,38 +1,33 @@
 package de.he;
 
-import org.glassfish.jersey.server.mvc.Viewable;
-import java.net.URI;
+import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
-import java.util.Hashtable;
 import java.util.Vector;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
-import javax.ws.rs.FormParam;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-
-import javax.json.Json;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-
 public class SQLite {
-    private Connection connect() {
+    private Connection connect() throws ClassNotFoundException {
+        System.out.println("1");
+
+        Class.forName("org.sqlite.JDBC");
+        System.out.println("2");
+
         Connection conn = null;
         try {
-            String sqlPath = "";
-            conn = DriverManager.getConnection("jdbc:sqlite:" + sqlPath);
+            String sqlPath = "/tmp/he.sqlite";
+            boolean initDatabase = (new File(sqlPath).exists());
+            if(initDatabase){
+                System.out.println("okay");
+            }
+            else
+                System.out.println("sieht schlecht aus lol");
+
+            conn = DriverManager.getConnection("jdbc:sqlite:new.db");
+
         }
         catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -69,11 +64,14 @@ public class SQLite {
             System.out.println(e.getMessage());
 
             return -1;
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            return -1;
         }
     }
 
     public CPU selectCPU(int artNr) {
-        String sql = "SELECT (ArtNr,Manufacturer,ArtName,Price,ArtCount,Cores,Threads,Frequenzy,Turbo,Socket,TDP) FROM Article INNER JOIN Processor ON Article.ArtNr = Processor.ArtNr)";
+        String sql = "SELECT * FROM Article INNER JOIN Processor ON Article.ArtNr = Processor.ArtNr" ;
         CPU cpu = new CPU(0, 0, "", "", 0, 0, 0, 0, 0, "", 0);
         try (Connection conn = this.connect();
              Statement stmt = conn.createStatement();
@@ -88,13 +86,16 @@ public class SQLite {
         }
         catch (SQLException e) {
             System.out.println(e.getMessage());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
         return cpu;
     }
 
     public Vector<CPU> getAllCpus() {
-        String sql = "SELECT (ArtNr,Manufacturer,ArtName,Price,ArtCount,Cores,Threads,Frequenzy,Turbo,Socket,TDP) FROM Article INNER JOIN Processor ON Article.ArtNr = Processor.ArtNr)";
+        String sql = "SELECT * FROM Article INNER JOIN Processor ON Article.ArtNr = Processor.ArtNr";
         Vector<CPU> cpus = new Vector<CPU>();
+        System.out.println("allcpou");
         try (Connection conn = this.connect();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
@@ -105,6 +106,8 @@ public class SQLite {
         }
         catch (SQLException e) {
             System.out.println(e.getMessage());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
         return cpus;
     }

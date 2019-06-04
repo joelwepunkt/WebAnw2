@@ -32,11 +32,14 @@ public class Hardwareelectronics {
     }
 
     @GET
-    @Path("Cpudetail")
+    @Path("cpus/{pathID}")
     // Tell Jersey we want to return JSON
     @Produces(MediaType.APPLICATION_JSON)
-    public Response cpuJSON() throws Exception {
-        Vector<CPU> cpus = getAllCpus();   //Method should return selected Cpu!
+    public Response cpuJSON(@PathParam("pathID") String strID) throws Exception {
+        int intID = Integer.parseInt(strID);
+        System.out.println("Joels schuld");
+        SQLite s = new SQLite();
+        CPU cpus = s.selectCPU(intID);   //Method should return selected Cpu!
 
         // By setting our Vector<EntryModel> into the entity method
         // Jersey now tries to convert our POJO (Plain Old Java Object) into JSON
@@ -49,23 +52,14 @@ public class Hardwareelectronics {
     // Tell Jersey we want to return JSON
     @Produces(MediaType.APPLICATION_JSON)
     public Response cpusJSON() throws Exception {
-        Vector<CPU> cpus = getAllCpus();   //Method should return all Cpus we offer!
+        System.out.println("okay");
+
+        SQLite s = new SQLite();
+        Vector<CPU> cpus = s.getAllCpus();   //Method should return all Cpus we offer!
 
         // By setting our Vector<EntryModel> into the entity method
         // Jersey now tries to convert our POJO (Plain Old Java Object) into JSON
         //return Response.status(200).entity(cpus).build();
         return Response.status(Response.Status.OK).entity(cpus).build();
-    }
-
-    //only test until joels method is done
-    public Vector<CPU> getAllCpus() {
-        //Aufruf von Joels methode um die objekte aus der db zu ziehen
-        CPU cpus = new CPU(120, 1, "AMD", "Ryzen 6", 12, 4, 2, 1000, 1, "AM4", 2);
-        CPU cpu = new CPU(120, 1, "AMD", "Ryzen 6", 12, 4, 2, 1000, 1, "AM4", 2);
-        //String header = "<html>Hallo Welt!</html>";
-        Vector cpuu = new Vector<CPU>();
-        cpuu.add(cpus);
-        cpuu.add(cpus);
-        return cpuu;
     }
 }
