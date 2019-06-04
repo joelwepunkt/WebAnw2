@@ -37,6 +37,7 @@ public class Hardwareelectronics {
     @Produces(MediaType.APPLICATION_JSON)
     public Response cpuJSON(@PathParam("pathID") String strID) throws Exception {
         int intID = Integer.parseInt(strID);
+        System.out.println("Joels schuld");
         SQLite s = new SQLite();
         CPU cpus = s.selectCPU(intID);   //Method should return selected Cpu!
 

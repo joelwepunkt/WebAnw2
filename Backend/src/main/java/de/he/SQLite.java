@@ -38,8 +38,8 @@ public class SQLite {
 
         Connection conn = null;
         try {
-            String sqlPath = "/tmp/he.db";
-            boolean initDatabase = !(new File(sqlPath).exists());
+            String sqlPath = "/tmp/he.sqlite";
+            boolean initDatabase = (new File(sqlPath).exists());
             if(initDatabase){
                 System.out.println("okay");
             }
@@ -90,7 +90,7 @@ public class SQLite {
     }
 
     public CPU selectCPU(int artNr) {
-        String sql = "SELECT (ArtNr,Manufacturer,ArtName,Price,ArtCount,Cores,Threads,Frequenzy,Turbo,Socket,TDP) FROM Article INNER JOIN Processor ON Article.ArtNr = Processor.ArtNr)";
+        String sql = "SELECT * FROM Article INNER JOIN Processor ON Article.ArtNr = Processor.ArtNr" ;
         CPU cpu = new CPU(0, 0, "", "", 0, 0, 0, 0, 0, "", 0);
         try (Connection conn = this.connect();
              Statement stmt = conn.createStatement();
@@ -112,7 +112,7 @@ public class SQLite {
     }
 
     public Vector<CPU> getAllCpus() {
-        String sql = "SELECT (ArtNr,Manufacturer,ArtName,Price,ArtCount,Cores,Threads,Frequenzy,Turbo,Socket,TDP) FROM Article INNER JOIN Processor ON Article.ArtNr = Processor.ArtNr)";
+        String sql = "SELECT * FROM Article INNER JOIN Processor ON Article.ArtNr = Processor.ArtNr";
         Vector<CPU> cpus = new Vector<CPU>();
         try (Connection conn = this.connect();
              Statement stmt = conn.createStatement();
