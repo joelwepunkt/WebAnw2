@@ -4,18 +4,16 @@
     <meta charset="utf-8" />
     <%@ page contentType="text/html; charset=UTF-8" %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tobi ist Schwuuuuul</title>
+    <title>Tobias ist Schwuuuuul</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
-    <!-- <link rel="stylesheet" type="text/css" href="style.css" media="screen" /> -->
-    <!-- Das neueste kompilierte und minimierte CSS
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+    <!-- Das neueste kompilierte und minimierte CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
     <!-- Optionales Theme -->
+<%--    TODO: Fix the version--%>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
-    <!-- Das neueste kompilierte und minimierte JavaScript
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+    <!-- Das neueste kompilierte und minimierte JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

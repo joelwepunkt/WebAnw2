@@ -8,6 +8,14 @@ public class Article {
     protected String artName;
     protected int artCount;
 
+    public Article(float price, int artNr, String manufact, String artName, int artCount) {
+        this.price = price;
+        this.artNr = artNr;
+        this.manufact = manufact;
+        this.artName = artName;
+        this.artCount = artCount;
+    }
+
     public int getArtCount() {
         return artCount;
     }
