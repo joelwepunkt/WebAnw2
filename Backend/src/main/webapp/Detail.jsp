@@ -2,6 +2,7 @@
 <html>
 <head> 
     <meta charset="utf-8">
+    <%@ page contentType="text/html; charset=UTF-8" %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
     <!-- <link rel="stylesheet" type="text/css" href="style.css" media="screen" /> -->
@@ -70,7 +71,7 @@
 <!-- Content -->
 <div class="platzhalter"></div>
 <div class="container-fluid content">
-    <h1>AMD Ryzen 2600X</h1>
+    <h1 class="label"></h1>
     <div class="row margin-b-50 detlFont">
         <div class="col-md-6 col">
           <!--Carousel Wrapper-->
@@ -120,14 +121,12 @@
           <!--/.Carousel Wrapper-->
         </div>
         <div class="col-md-3 margin-t-150">
-          <div class="col height-100">
-            Preis: 189,99€
+          <div class="col height-100" id="price">
           </div>
           <div class="col height-100">
             <img src="Pictures/4-Sterne.png" class="star-big"/><br>4,2 Sterne
           </div>
-          <div class="col height-100">
-            Lagernd: >5 Stück
+          <div class="col height-100" id="stock">
           </div>
         </div>
         <div class="col-md-3 margin-t-150">
@@ -171,31 +170,23 @@
       <table class="table table-striped margin-b-50">
           <tr>
               <td>Prozessor</td>
-              <td>AMD Ryzen 2600X</td>
+              <td class="label"></td>
           </tr>
           <tr>
               <td>Anzahl Kerne/Threads</td>
-              <td>6/12</td>
+              <td id="threads"></td>
           </tr>
           <tr>
               <td>Takt/Turbo</td>
-              <td>3.60Ghz/4.20GHz</td>
+              <td id="frequency"></td>
           </tr>
           <tr>
               <td>Sockel</td>
-              <td>AM4</td>
+              <td id="socket"></td>
           </tr>
           <tr>
               <td>TDP</td>
-              <td>95 Watt</td>
-          </tr>
-          <tr>
-              <td>L2 Cache</td>
-              <td>3MB</td>
-          </tr>
-          <tr>
-              <td>L3 Cache</td>
-              <td>16MB</td>
+              <td id="tdp"></td>
           </tr>
       </table>
     </div>
@@ -226,93 +217,80 @@
 </div>
 
 
-<!-- Footer -->
-<footer class="page-footer font-small blue pt-4 primary-color">
+    <!-- Footer -->
+    <footer class="page-footer font-small blue pt-4 primary-color">
 
-  <!-- Footer Links -->
-  <div class="container-fluid text-center text-md-left">
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
 
-    <!-- Grid row -->
-    <div class="row">
+            <!-- Grid row -->
+            <div class="row">
 
-          <!-- Content -->
-          <h5 class="text-uppercase">Hardware Electronics</h5>
-          <p>Besuchen Sie auch unsere social Media Seiten.</p>
+                <!-- Grid column -->
+                <div class="col-md-6 mt-md-0 mt-3">
 
-        <!-- Content -->
-        <h5 class="text-uppercase">Hardware Electronics</h5>
-        <p>Besuchen Sie auch unsere social Media Seiten.</p>
+                    <!-- Content -->
+                    <h5 class="text-uppercase">Hardware Electronics</h5>
+                    <p>Besuchen Sie auch unsere social Media Seiten.</p>
 
-      </div>
-      <!-- Grid column -->
+                </div>
+                <!-- Grid column -->
 
-      <hr class="clearfix w-100 d-md-none pb-3">
+                <hr class="clearfix w-100 d-md-none pb-3">
 
-            <!-- Links -->
-            <h5 class="text-uppercase">Social Media</h5>
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
 
-            <ul class="list-unstyled">
-              <li>
-                <a href="http://www.facebook.de">Facebook</a>
-              </li>
-              <li>
-                <a href="http://www.Twitter.de">Twitter</a>
-              </li>
-              <li>
-                <a href="http://www.instagram.de">Instagram</a>
-              </li>
-            </ul>
+                    <!-- Links -->
+                    <h5 class="text-uppercase">Social Media</h5>
 
-          <ul class="list-unstyled">
-            <li>
-              <a href="http://www.facebook.de">Facebook</a>
-            </li>
-            <li>
-              <a href="http://www.Twitter.de">Twitter</a>
-            </li>
-            <li>
-              <a href="http://www.instagram.de">Instagram</a>
-            </li>
-          </ul>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="http://www.facebook.de">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="http://www.Twitter.de">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="http://www.instagram.de">Instagram</a>
+                        </li>
+                    </ul>
 
-        </div>
-        <!-- Grid column -->
+                </div>
+                <!-- Grid column -->
 
-            <!-- Links -->
-            <h5 class="text-uppercase">Über uns</h5>
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
 
-            <ul class="list-unstyled">
-              <li>
-                <a href="http://www.google.de">Impressum</a>
-              </li>
-              <li>
-                <a href="http://www.google.de">Datenschutzerklärung</a>
-              </li>
-            </ul>
+                    <!-- Links -->
+                    <h5 class="text-uppercase">Über uns</h5>
 
-          <ul class="list-unstyled">
-            <li>
-              <a href="http://www.google.de">Impressum</a>
-            </li>
-            <li>
-              <a href="http://www.google.de">Datenschutzerklärung</a>
-            </li>
-          </ul>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="http://www.google.de">Impressum</a>
+                        </li>
+                        <li>
+                            <a href="http://www.google.de">Datenschutzerklärung</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
 
         </div>
-        <!-- Grid column -->
+        <!-- Footer Links -->
 
-    </div>
-    <!-- Grid row -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 sec-color">© 2018 Copyright:
+            <a href="http://google.de"> HardwareElectronics.com</a>
+        </div>
+        <!-- Copyright -->
 
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <a href="http://google.de"> HardwareElectronics.com</a>
-    </div>
-    <!-- Copyright -->
-
-  </footer>
-  <!-- Footer -->
+    </footer>
+    <!-- Footer -->
     
 </body>
 
@@ -320,35 +298,30 @@
     $(document).ready(function() {
 
         console.log("Document ready, binding button");
-
-        $("#search").click(function() {
-            console.log("Seach button clicked");
-
-            var name = $.trim($("#name").val());
-
-            if (name === "") {
-                $("#ziel").text("Eingabefeld ist leer");
-            } else {
-
-                $("#ziel").text("");
-                $.ajax({
-                    url: "rest/Student/getByNameAsText/" + name,
-                    method: "GET",
-                    dataType: "json"
-                })
-                    .done(function(response) {
-                        console.log(response);
-                        $("#ziel").text("Empfangene Daten: " + JSON.stringify(response));
-                    })
-                    .fail(function(jqXHR, statusText, error) {
-                        var errorMsg = "Response Code: " + jqXHR.status + " - Fehlermeldung: " + jqXHR.responseText;
-                        console.log(errorMsg);
-                        $("#ziel").text("Es ist ein Fehler aufgetreten");
-                    });
-            }
-
-        });
-
+        $("#ziel").text("");
+        $.ajax({
+            url: "cpus/1",
+            method: "GET",
+            dataType: "json"
+        })
+            .done(function(response) {
+                console.log(response);
+                x=document.getElementsByClassName("label");  // Find the elements
+                for(var i = 0; i < x.length; i++){
+                    x[i].innerText=JSON.stringify(response.manufact + " " + response.artName);    // Change the content
+                }
+                $("#price").text(JSON.stringify("Preis: " + response.price + "€"));
+                $("#threads").text(JSON.stringify(response.core + "/" + response.threads));
+                $("#frequency").text(JSON.stringify(response.frequency + "/" + response.turbo));
+                $("#socket").text(JSON.stringify(response.socket));
+                $("#tdp").text(JSON.stringify(response.tdp));
+                $("#stock").text(JSON.stringify(response.artCount + " Stück auf Lager"))
+            })
+            .fail(function(jqXHR, statusText, error) {
+                var errorMsg = "Response Code: " + jqXHR.status + " - Fehlermeldung: " + jqXHR.responseText;
+                console.log(errorMsg);
+                $("#ziel").text("Es ist ein Fehler aufgetreten");
+            });
     });
 </script>
 

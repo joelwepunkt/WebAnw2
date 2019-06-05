@@ -1,3 +1,4 @@
+
 package de.he;
 
 import java.io.File;
@@ -18,7 +19,7 @@ public class SQLite {
 
         Connection conn = null;
         try {
-            String sqlPath = "/tmp/he.sqlite";
+            String sqlPath = "he.sqlite";
             boolean initDatabase = (new File(sqlPath).exists());
             if(initDatabase){
                 System.out.println("okay");
@@ -26,7 +27,7 @@ public class SQLite {
             else
                 System.out.println("sieht schlecht aus lol");
 
-            conn = DriverManager.getConnection("jdbc:sqlite:sqlite.db");
+            conn = DriverManager.getConnection("jdbc:sqlite:C:/tmp/he.sqlite");
 
         }
         catch (SQLException e) {
@@ -71,7 +72,7 @@ public class SQLite {
     }
 
     public CPU selectCPU(int artNr) {
-        String sql = "SELECT * FROM Article INNER JOIN Processor ON Article.ArtNr = Processor.ArtNr" ;
+        String sql = "SELECT * FROM Article INNER JOIN Processor ON Article.ArtNr = Processor.ArtNr";
         CPU cpu = new CPU(0, 0, "", "", 0, 0, 0, 0, 0, "", 0);
         try (Connection conn = this.connect();
              Statement stmt = conn.createStatement();
