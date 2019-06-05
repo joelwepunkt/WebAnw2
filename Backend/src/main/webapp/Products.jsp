@@ -80,7 +80,7 @@
                 <h3 id="name"></h3>
                 <p id="price"></p>
                 <p id="stock"></p>
-                <p><a href="Detail.html" class="btn btn-primary" role="button">Zum Kauf</a></p>
+                <p><a href="Detail.jsp" class="btn btn-primary" role="button">Zum Kauf</a></p>
             </div>
         </div>
     </div>
