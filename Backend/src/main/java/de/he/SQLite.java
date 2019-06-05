@@ -18,7 +18,7 @@ public class SQLite {
 
         Connection conn = null;
         try {
-            String sqlPath = "/tmp/he.sqlite";
+            String sqlPath = "he.sqlite";
             boolean initDatabase = (new File(sqlPath).exists());
             if(initDatabase){
                 System.out.println("okay");
@@ -26,7 +26,7 @@ public class SQLite {
             else
                 System.out.println("sieht schlecht aus lol");
 
-            conn = DriverManager.getConnection("jdbc:sqlite:new.db");
+            conn = DriverManager.getConnection("jdbc:sqlite:C:/tmp/he.sqlite");
 
         }
         catch (SQLException e) {

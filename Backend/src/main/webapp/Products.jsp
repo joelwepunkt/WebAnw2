@@ -170,6 +170,8 @@
                     })
                         .done(function(response) {
                             console.log(response);
+                            var cpus = JSON.stringify(response).split('}');
+                            while 
                             $("#ziel").text("Empfangene Daten: " + JSON.stringify(response));
                         })
                         .fail(function(jqXHR, statusText, error) {
