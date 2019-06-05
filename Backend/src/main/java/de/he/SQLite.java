@@ -71,7 +71,7 @@ public class SQLite {
     }
 
     public CPU selectCPU(int artNr) {
-        String sql = "SELECT * FROM Article INNER JOIN Processor ON Article.ArtNr = Processor.ArtNr" ;
+        String sql = "SELECT * FROM Article INNER JOIN Processor ON Article.ArtNr = Processor.ArtNr";
         CPU cpu = new CPU(0, 0, "", "", 0, 0, 0, 0, 0, "", 0);
         try (Connection conn = this.connect();
              Statement stmt = conn.createStatement();

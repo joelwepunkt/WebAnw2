@@ -2,6 +2,7 @@
 <html>
 <head> 
     <meta charset="utf-8">
+    <%@ page contentType="text/html; charset=UTF-8" %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
     <!-- <link rel="stylesheet" type="text/css" href="style.css" media="screen" /> -->
@@ -71,8 +72,18 @@
 
 
 
-
-<div id="ziel">
+<div class="row" id="pasteMe">
+    <div class="col-sm-4 col-md-4" id="copyMe">
+        <div class="thumbnail padpic">
+            <img src="Pictures/AMD_Athlon_200GE.jpg" class="pic">
+            <div class="caption">
+                <h3 id="name"></h3>
+                <p id="price"></p>
+                <p id="stock"></p>
+                <p><a href="Detail.html" class="btn btn-primary" role="button">Zum Kauf</a></p>
+            </div>
+        </div>
+    </div>
 
 </div>
 
@@ -170,9 +181,21 @@
                     })
                         .done(function(response) {
                             console.log(response);
-                            var cpus = JSON.stringify(response).split('}');
-                            while 
-                            $("#ziel").text("Empfangene Daten: " + JSON.stringify(response));
+                            var k;
+                            var i;
+                            k = 1;
+                            for(i=0; i<response.length; i++) {
+                                if (k!=1) {
+                                    console.log("passt")
+                                    var itm = document.getElementById("copyMe");
+                                    var cln = itm.cloneNode(true);
+                                    document.getElementById("pasteMe").appendChild(cln);
+                                }
+                                $("#name").text(JSON.stringify(response[i].manufact + " " + response[i].artName));
+                                $("#price").text(JSON.stringify(response[i].price + "€"));
+                                $("#stock").text(JSON.stringify(response[i].artCount + " Stück auf Lager"))
+                                k=0;
+                            }
                         })
                         .fail(function(jqXHR, statusText, error) {
                             var errorMsg = "Response Code: " + jqXHR.status + " - Fehlermeldung: " + jqXHR.responseText;
