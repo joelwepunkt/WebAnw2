@@ -26,7 +26,7 @@ public class SQLite {
             else
                 System.out.println("sieht schlecht aus lol");
 
-            conn = DriverManager.getConnection("jdbc:sqlite:new.db");
+            conn = DriverManager.getConnection("jdbc:sqlite:sqlite.db");
 
         }
         catch (SQLException e) {
