@@ -1,70 +1,69 @@
 <!DOCTYPE html>
 <html>
-<head> 
-    <meta charset="utf-8">
+<head>
+    <meta charset="utf-8" />
     <%@ page contentType="text/html; charset=UTF-8" %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tobias ist Schwuuuuul</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
-    <!-- <link rel="stylesheet" type="text/css" href="style.css" media="screen" /> -->
-    <!-- Das neueste kompilierte und minimierte CSS
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+    <!-- Das neueste kompilierte und minimierte CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
     <!-- Optionales Theme -->
+    <%--    TODO: Fix the version--%>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    
-    <!-- Das neueste kompilierte und minimierte JavaScript
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+
+    <!-- Das neueste kompilierte und minimierte JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    
+
 </head>
-<body>	
-    <!-- Header -->
-	<div class="container-fluid headerbg">
-	   <!-- table for the top: logo, searchbar, card -->
-        <div class="row d-flex align-items-center">
-	        <div class="col-md-4">
-                <img src="Logo/Logo3.png" id="logo">
-            </div>
-            
-            <div class="col-md-4">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Suche nach...">
-                    <span class="input-group-btn">
+<body>
+<!-- Header -->
+<div class="container-fluid headerbg">
+    <!-- table for the top: logo, searchbar, card -->
+    <div class="row d-flex align-items-center">
+        <div class="col-md-4">
+            <img src="Logo/Logo3.png" id="logo">
+        </div>
+
+        <div class="col-md-4">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Suche nach...">
+                <span class="input-group-btn">
                         <button class="btn btn-default" type="button">Los!</button>
                     </span>
-                </div><!-- /input-group -->
-            </div><!-- /.col-lg-6 -->
-            
-            <div class="col-md-4">
-                <input type=button value="Einkaufswagen" onclick="window.location.href='card.html';" class="pull-right"/>
-            </div>
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+
+        <div class="col-md-4">
+            <input type=button value="Einkaufswagen" onclick="window.location.href='card.jsp';" class="pull-right"/>
         </div>
     </div>
-    <!-- !Header -->
-    
-<!-- Navbar -->	
+</div>
+<!-- !Header -->
+
+<!-- Navbar -->
 <nav class="navbar navbar-expand-sm sticky-top primary-color topnav">
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="index.html">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="Products.jsp">Prozessoren</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="Products.jsp">Arbeitsspecher</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="Products.jsp">Festplatten</a>
-    </li>
-    <li class="nav-item pull-right">
-      <a class="nav-link" href="Kontakt.html">Kontakt</a>
-    </li>
-  </ul>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="index.jsp">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Products.jsp">Prozessoren</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Products.jsp">Arbeitsspecher</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Products.jsp">Festplatten</a>
+        </li>
+        <li class="nav-item pull-right">
+            <a class="nav-link" href="Kontakt.jsp">Kontakt</a>
+        </li>
+    </ul>
 </nav>
 <!-- !Navbar -->
     
@@ -140,7 +139,7 @@
             
           </div>
           <div class="col height-100">
-            <input type="button" value="In den Einkaufswagen" onclick="window.location.href='card.html';"/>
+            <input type="button" value="In den Einkaufswagen" onclick="window.location.href='card.jsp';"/>
           </div>
         </div>
     </div>
@@ -296,11 +295,11 @@
 
 <script>
     $(document).ready(function() {
-
-        console.log("Document ready, binding button");
-        $("#ziel").text("");
+        var urlParams = new URLSearchParams(window.location.search);
+        var value = urlParams.get('article');
+        console.log(value);
         $.ajax({
-            url: "cpus/1",
+            url: "cpus/" + value,
             method: "GET",
             dataType: "json"
         })
