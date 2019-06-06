@@ -39,7 +39,7 @@
         </div><!-- /.col-lg-6 -->
 
         <div class="col-md-4">
-            <input type=button value="Einkaufswagen" onclick="window.location.href='card.html';" class="pull-right"/>
+            <input type=button value="Einkaufswagen" onclick="window.location.href='card.jsp';" class="pull-right"/>
         </div>
     </div>
 </div>
@@ -49,7 +49,7 @@
 <nav class="navbar navbar-expand-sm sticky-top primary-color topnav">
     <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="index.jsp">Home</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="Products.jsp">Prozessoren</a>
@@ -61,7 +61,7 @@
             <a class="nav-link" href="Products.jsp">Festplatten</a>
         </li>
         <li class="nav-item pull-right">
-            <a class="nav-link" href="Kontakt.html">Kontakt</a>
+            <a class="nav-link" href="Kontakt.jsp">Kontakt</a>
         </li>
     </ul>
 </nav>
