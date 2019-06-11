@@ -73,13 +73,13 @@ public class SQLite {
 
     public CPU selectCPU(int artNr) {
         String sql = "SELECT * FROM Article INNER JOIN Processor ON Article.ArtNr = Processor.ArtNr";
-        CPU cpu = new CPU(0, 0, "", "", 0, 0, 0, 0, 0, "", 0);
+        CPU cpu = new CPU(0, 0, "", "", 0, 0, 0, 0, 0, "", 0, "", "");
         try (Connection conn = this.connect();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
             while (rs.next()) {
                 if (rs.getInt("ArtNr") == artNr) {
-                    CPU cpu1 = new CPU(rs.getFloat("Price"), rs.getInt("ArtNr"), rs.getString("Manufacturer"), rs.getString("ArtName"), rs.getInt("ArtCount"), rs.getInt("Cores"), rs.getInt("Threads"), rs.getFloat("Frequenzy"), rs.getFloat("Turbo"), rs.getString("Socket"), rs.getInt("TDP"));
+                    CPU cpu1 = new CPU(rs.getFloat("Price"), rs.getInt("ArtNr"), rs.getString("Manufacturer"), rs.getString("ArtName"), rs.getInt("ArtCount"), rs.getInt("Cores"), rs.getInt("Threads"), rs.getFloat("Frequenzy"), rs.getFloat("Turbo"), rs.getString("Socket"), rs.getInt("TDP"), rs.getString("description"), rs.getString("bild"));
                     cpu = cpu1;
                     break;
                 }
@@ -95,13 +95,12 @@ public class SQLite {
 
     public Vector<CPU> getAllCpus() {
         String sql = "SELECT * FROM Article INNER JOIN Processor ON Article.ArtNr = Processor.ArtNr";
-        Vector<CPU> cpus = new Vector<CPU>();
-        System.out.println("allcpou");
+        Vector<CPU> cpus = new Vector<>();
         try (Connection conn = this.connect();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
             while (rs.next()) {
-                CPU newCpu = new CPU(rs.getFloat("Price"), rs.getInt("ArtNr"), rs.getString("Manufacturer"), rs.getString("ArtName"), rs.getInt("ArtCount"), rs.getInt("Cores"), rs.getInt("Threads"), rs.getFloat("Frequenzy"), rs.getFloat("Turbo"), rs.getString("Socket"), rs.getInt("TDP"));
+                CPU newCpu = new CPU(rs.getFloat("Price"), rs.getInt("ArtNr"), rs.getString("Manufacturer"), rs.getString("ArtName"), rs.getInt("ArtCount"), rs.getInt("Cores"), rs.getInt("Threads"), rs.getFloat("Frequenzy"), rs.getFloat("Turbo"), rs.getString("Socket"), rs.getInt("TDP"), rs.getString("decription"), rs.getString("bild"));
                 cpus.add(newCpu);
             }
         }
