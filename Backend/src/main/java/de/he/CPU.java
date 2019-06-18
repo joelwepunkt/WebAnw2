@@ -8,8 +8,8 @@ public class CPU extends Article {
     private String socket;
     private int tdp;
 
-    public CPU(float price, int artNr, String manufact, String artName, int artCount, int core, int threads, float frequency, float turbo, String socket, int tdp) {
-        super(price, artNr, manufact, artName, artCount);
+    public CPU(float price, int artNr, String manufact, String artName, int artCount, int core, int threads, float frequency, float turbo, String socket, int tdp, String description, String bild) {
+        super(price, artNr, manufact, artName, artCount, description, bild);
         this.core = core;
         this.threads = threads;
         this.frequency = frequency;

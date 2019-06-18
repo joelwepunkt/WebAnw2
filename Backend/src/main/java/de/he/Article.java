@@ -7,13 +7,17 @@ public class Article {
     protected String manufact;
     protected String artName;
     protected int artCount;
+    protected String description;
+    protected String bild;
 
-    public Article(float price, int artNr, String manufact, String artName, int artCount) {
+    public Article(float price, int artNr, String manufact, String artName, int artCount, String description, String bild) {
         this.price = price;
         this.artNr = artNr;
         this.manufact = manufact;
         this.artName = artName;
         this.artCount = artCount;
+        this.description = description;
+        this.bild = bild;
     }
 
     public int getArtCount() {
@@ -55,4 +59,12 @@ public class Article {
     public void setArtName(String artName) {
         this.artName = artName;
     }
+
+    public String getDescription() { return description; }
+
+    public void setDescription(String description) { this.description = description; }
+
+    public String getBild() { return this.bild; }
+
+    public void setBild(String bild) { this.bild = bild; }
 }
