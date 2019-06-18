@@ -84,25 +84,12 @@
         </thead>
         
         <tr>
-                <td>1</td>
-                <td>Grafikkarte</td>
-                <td>2</td>
-                <td>200€</td>
+                <td id="position"></td>
+                <td id="produkt"></td>
+                <td id="count"></td>
+                <td id="price"></td>
         </tr>
-        
-        <tr>
-                <td>1</td>
-                <td>Grafikkarte</td>
-                <td>2</td>
-                <td>200€</td>
-        </tr>
-        
-        <tr>
-                <td>1</td>
-                <td>Grafikkarte</td>
-                <td>2</td>
-                <td>200€</td>
-          </tr>
+
   </table>
 </div>    
     <br><br>
@@ -266,4 +253,38 @@
 <!-- Footer -->
   
 </body>
+
+<script>
+    /*$(document).ready(function() {
+        $.ajax({
+            url: "cart",
+            method: "GET",
+            dataType: "json"
+        })
+            .done(function(response) {
+                var i;
+                for(i=0; i<response.length; i++) {
+                    document.getElementById("position").innerHTML = i.toString();
+                    $("#produkt").text(JSON.stringify(response.ArtNr));
+                    $("#count").text(JSON.stringify(response.Count));
+                    document.getElementById("price").innerHTML = "150€";
+                }
+            })
+    }
+    $(onDocumentReady);
+
+    function onDocumentReady() {
+        load();
+        cart();
+    }
+    function load() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var value = urlParams.get('article');
+        console.log(value);
+        $.ajax({
+            url: "cpus/setsession",
+            method: "GET",
+            dataType: "json"
+        })*/
+</script>
 </html>

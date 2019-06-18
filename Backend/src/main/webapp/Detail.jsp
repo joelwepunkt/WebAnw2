@@ -130,7 +130,7 @@
         </div>
         <div class="col-md-3 margin-t-150">
           <div class="col height-100">
-            Anzahl: <input type="number" value="1" min="1" max="5"/>
+            Anzahl: <input type="number" id="count" value="1" min="1" max="5"/>
           </div>
           <div class="col height-100">
             <table>
@@ -139,7 +139,7 @@
             
           </div>
           <div class="col height-100">
-            <input type="button" value="In den Einkaufswagen" onclick="window.location.href='card.jsp';"/>
+            <input type="button" value="In den Einkaufswagen" id="cartButton" onclick="session()"/>
           </div>
         </div>
     </div>
@@ -293,8 +293,16 @@
     
 </body>
 
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+
 <script>
-    $(document).ready(function() {
+    $(onDocumentReady);
+
+    function onDocumentReady() {
+        load();
+        //cart();
+    }
+    function load() {
         var urlParams = new URLSearchParams(window.location.search);
         var value = urlParams.get('article');
         console.log(value);
@@ -321,7 +329,41 @@
                 console.log(errorMsg);
                 $("#ziel").text("Es ist ein Fehler aufgetreten");
             });
-    });
+    }
+    function cart(response) {
+        window.alert("1.");
+        $("#cartButton").click(setCart());
+    }
+    function setCart() {
+        window.alert("2.");
+        var setCart = {
+            ArtNr: JSON.stringify(response.artNr),
+            Count: document.getElementById("count"),
+        };
+
+        $.post("Hardwareelectronics", setCart);
+    }
+
+    function session() {
+        let urlParams = new URLSearchParams(window.location.search);
+        let id = urlParams.get('article');
+        let count = $("#count");
+        let postData = {
+            pid: id,
+            pcount: count
+        };
+        $.post("cpus/setsession", postData);
+        /*window.alert("Brust");
+        var urlParams = new URLSearchParams(window.location.search);
+        var value = urlParams.get('article');
+        console.log(value);
+
+        $.ajax({
+            url: "cpus/setsession",
+            method: "POST"
+            //datatype: "Viewable"
+        })*/
+    }
 </script>
 
 </html>

@@ -112,4 +112,48 @@ public class SQLite {
         }
         return cpus;
     }
+
+    public Vector<Cart> getCart(String id) {
+        String sql = "SELECT * FROM Cart";
+        Vector<Cart> cart = new Vector<Cart>();
+        System.out.println("cart");
+
+        try (Connection conn = this.connect();
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery(sql)) {
+            while (rs.next()) {
+                if (rs.getString("SID") == id) {
+                    Cart newCart = new Cart(rs.getInt("CID"), rs.getString("SID"), rs.getInt("ArtNr"), rs.getInt("Count"));
+                    cart.add(newCart);
+                }
+            }
+        }
+        catch (SQLException e) {
+            System.out.println(e.getMessage());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return cart;
+    }
+
+    public int setCart(String id, int ArtNr, int Count) {
+        String sql = "INSERT INTO (Cart SID, ArtNr, Count) VALUES(?,?,?)";
+        try (Connection conn = this.connect();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+            ps.setString(1, id);
+            ps.setInt(2, ArtNr);
+            ps.setInt(3, Count);
+
+            ps.executeUpdate();
+            return 0;
+        }
+        catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return -1;
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            return -1;
+        }
+    }
 }

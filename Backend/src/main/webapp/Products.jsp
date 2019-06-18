@@ -169,6 +169,7 @@
 
 </footer>
 <!-- Footer -->
+<script src="https://code.jquery.com/jquery-latest.js"></script>
 
     <script>
         $(document).ready(function() {
